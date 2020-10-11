@@ -1,0 +1,46 @@
+{% extends 'hellomobileapp/base.html' %}
+{% load static %}
+{% block content %}
+<link href="{% static 'css/table.css' %}" rel="stylesheet" id="bootstrap-css">
+    
+    <main>
+        
+        <!--MDB Tables-->
+        <div class="container mt-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <!-- Grid row -->
+                    <div class="row">
+                        <!-- Grid column -->
+                        <div class="col-md-12">
+                            <h2 class="pt-3 pb-4 text-center font-bold font-up danger-text">Report Lists</h2>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <!-- Grid row -->
+                    <table class="table table-bordered red-border text-center">
+                        <thead>
+                            <tr>
+        <th scope="col"><b>Device</b></th>
+        <th scope="col"><b>Model</b></th>
+        <th scope="col"><b>Name</b></th>
+        <th scope="col"><b>Price</b></th>
+        <th scope="col"><b>Status</b></th>
+                            </tr>
+                        </thead>
+    {% for ps in pricesale %}
+    <tbody>
+      <tr>
+        <th scope="row">{{ps.brand}}</th>
+        <td>{{ps.model_name}}</td>
+        <td>{{ps.customer_name}}</td>
+        <td>{{ps.pricesale}}</td>
+        <td>{{ps.status}}</td>
+      </tr>
+    {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    </main>
+{% endblock content %}

@@ -1,0 +1,19 @@
+{% extends 'hellomobileapp/base.html' %}
+{% load static %}
+{% block content %}
+
+  <!-- Header - set the background image for the header in the line below -->
+  <header class="py-5 bg-image-full" style="background-image: url({% static 'img/banner.jpg' %});">
+    <img class="img-fluid d-block mx-auto" src="{% static 'img/logohome.png' %}" alt="">
+  </header>
+  
+  <!-- Content section -->
+  <section class="py-5">
+    <div class="container">
+      <h1>Welcome to HelloMobile website report service</h1>
+      <p class="lead">สวัสดีครับ พวกเราคือฮัลโหลดโมบายเป็นเว็บไซต์เกี่ยวกับการบริการด้านการแจ้งรายงานการซ่อม</p>
+      <p>เว็บไซต์นี้จะได้ให้ทุกท่านได้ทราบสถานะการซ่อมแซ่มอุปกรณ์สมาร์ทโฟนต่าง ๆ ที่ทุกท่านได้นำมาซ่อมกับทางร้าน</p>
+    </div>
+  </section>
+
+{% endblock content %}

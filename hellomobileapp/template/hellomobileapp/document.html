@@ -1,0 +1,47 @@
+{% extends 'hellomobileapp/base.html' %}
+
+{% block content %}
+
+<div class="container">
+  <center>
+
+  <table style="width:100%">
+    <tr><th>ชื่อไฟล์หนังสือ/เอกสาร Bronze</th><th>คำอธิบาย</th></tr>
+  {% for dc in document %}
+      {% if dc.level == 'ม.1' %}
+          <tr><td><a href="{{dc.document.url}}">{{dc.document_name}}</a></td><td>{{dc.other}}</td></tr>
+    {% endif %}   
+  {% endfor %}
+  </table><br>
+
+    <table style="width:100%">
+    <tr><th>ชื่อไฟล์หนังสือ/เอกสาร Silver</th><th>คำอธิบาย</th></tr>
+  {% for dc in document %}
+      {% if dc.level == 'ม.2' %}
+          <tr><td><a href="{{dc.document.url}}">{{dc.document_name}}</a></td><td>{{dc.other}}</td></tr>
+    {% endif %}  
+  {% endfor %}
+  </table><br>
+
+    <table style="width:100%">
+    <tr><th>ชื่อไฟล์หนังสือ/เอกสาร Gold</th><th>คำอธิบาย</th></tr>
+  {% for dc in document %}
+      {% if dc.level == 'ม.3' %}
+          <tr><td><a href="{{dc.document.url}}">{{dc.document_name}}</a></td><td>{{dc.other}}</td></tr>
+    {% endif %}  
+  {% endfor %}
+  </table><br>
+
+    <table style="width:100%">
+    <tr><th>ชื่อไฟล์หนังสือ/เอกสาร Diamond</th><th>คำอธิบาย</th></tr>
+  {% for dc in document %}
+      {% if dc.level == 'diamond' %}
+          <tr><td><a href="{{dc.document.url}}">{{dc.document_name}}</a></td><td>{{dc.other}}</td></tr>
+    {% endif %}  
+  {% endfor %}
+  </table><br>
+  </center>
+
+</div>
+
+{% endblock content %}
